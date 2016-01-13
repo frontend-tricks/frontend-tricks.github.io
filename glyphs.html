@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie-9 lt-ie-8 lt-ie-7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie-9 lt-ie-8 ie-7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie-9 ie-8"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie-9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8"/>
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <!-- <link rel="stylesheet" href="css/SyntaxHighlighter/shCore.css?v=1428047268431"/>-->
+    <link rel="stylesheet" href="css/SyntaxHighlighter/shCoreDefault.css?v=1428047268431"/>
+  <link rel="stylesheet" href="css/style.css?v=1428047268431"/>
+  <script src="js/modernizr.js"></script>
+  <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css?v=1428047268431"/><![endif]-->
+  <!--[if lte IE 9]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
+
+  <!--
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="">
+    <meta name="robots" content="index,follow">
+    <meta name="copyright" content="">
+  -->
+</head>
+
+
+<body>
+
+<div id="pageWrapper" class="page__wrapper">
+
+<header class="wrapper header">
+  <div class="container">
+    <p>
+        Самый лучшІй хедер
+    </p>
+  </div>
+</header>
+
+
+  <div class="container">
+
+      <div class="row">
+          <div class="col-md-3">
+<div id="sidebar">
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="scroll-top.html">Scroll To Top</a></li>
+            <li><a href="fixed-header.html">Fixed header</a></li>
+            <li><a href="tabs.html">Tabs</a></li>
+            <li><a href="equalheight.html">equalHeight</a></li>
+            <li><a href="crib.html">Crib</a></li>
+            <li><a href="glyphs.html">Glyphs</a></li>
+            <li><a href="accordion.html">Accordion</a></li>
+            <li><a href="element-click.html">Click outside an element</a></li>
+            <li><a href="links.html">Links</a></li>
+        </ul>
+    </nav>
+</div>
+          </div>
+          <div class="col-md-9">
+              <div class="info-box">
+                  <h1>Glyphs</h1>
+                  <table>
+                      <tr>
+                          <th>Name</th>
+                          <th></th>
+                          <th>Description</th>
+                          <th>ISO in CSS content</th>
+                          <th>Octal</th>
+
+                      </tr>
+                      <tr>
+                          <td>&amp;quot</td>
+                          <td>&quot;</td>
+                          <td>quotation mark</td>
+                          <td>p:before { content:&quot;\0022&quot;; }</td>
+                          <td>alert("\42")</td>
+                      </tr>
+                      <tr>
+                          <td>&amp;amp;</td>
+                          <td>&amp;</td>
+                          <td>ampersand</td>
+                          <td>p:before { content:"\0026"; }</td>
+                          <td>alert("\46")</td>
+                      </tr>
+                      <tr>
+                          <td>&amp;lt;</td>
+                          <td>&lt;</td>
+                          <td>less-than sign</td>
+                          <td>p:before { content:"\003c"; }</td>
+                          <td>alert("\74");</td>
+                      </tr>
+                      <tr>
+                          <td>&amp;gt;</td>
+                          <td>&gt;</td>
+                          <td>greater-than sign</td>
+                          <td>p:before { content:"\003e"; }</td>
+                          <td>alert("\76");</td>
+                      </tr>
+                      <tr>
+                          <td>&amp;copy;</td>
+                          <td>&copy;</td>
+                          <td>copyright sign</td>
+                          <td>p:before { content:"\00a9"; }</td>
+                          <td>alert("\251");</td>
+                      </tr>
+                      <tr>
+                          <td>&amp;reg;</td>
+                          <td>&reg;</td>
+                          <td>registered sign</td>
+                          <td>p:before { content:"\00ae"; }</td>
+                          <td>alert("\256");</td>
+                      </tr>
+                      <tr>
+                          <td>&amp;laquo;</td>
+                          <td>&laquo;</td>
+                          <td>angle quotation mark, left</td>
+                          <td>p:before { content:"\00ab"; }</td>
+                          <td>alert("\253");</td>
+                      </tr>
+                      <tr>
+                          <td>&amp;raquo;</td>
+                          <td>&raquo;</td>
+                          <td>angle quotation mark, right</td>
+                          <td>p:before { content:"\00bb"; }</td>
+                          <td>alert("\273");</td>
+                      </tr>
+                      <tr>
+                          <td>&amp;circ;</td>
+                          <td>&circ;</td>
+                          <td>modifier letter circumflex accent</td>
+                          <td>p:before { content:"\02c6"; }</td>
+                          <td>alert("\u02c6");</td>
+                      </tr>
+                      <tr>
+                          <td>&ndash;</td>
+                          <td>&amp;ndash;</td>
+                          <td>en dash</td>
+                          <td>p:before { content:"\2013";}</td>
+                          <td>alert("\u2013");</td>
+                      </tr>
+                      <tr>
+                          <td>&mdash;</td>
+                          <td>&amp;mdash;</td>
+                          <td>em dash</td>
+                          <td>p:before { content:"\2014";}</td>
+                          <td>alert("\u2014");</td>
+                      </tr>
+                      <tr>
+                          <td>&amp;lsaquo;</td>
+                          <td>&lsaquo;</td>
+                          <td>single left-pointing angle quotation mark
+                              (lsaquo is proposed but not yet ISO standardised)</td>
+                          <td>p:before { content:"\2039";}</td>
+                          <td>alert("\u2039");</td>
+                      </tr>
+                      <tr>
+                          <td>&amp;rsaquo;</td>
+                          <td>&rsaquo;</td>
+                          <td>single right-pointing angle quotation mark
+                              rsaquo is proposed but not yet ISO standardised</td>
+                          <td>p:before { content:"\203A";}</td>
+                          <td>alert("\u203a");</td>
+                      </tr>
+                  </table>
+
+              </div>
+
+          </div>
+      </div>
+  </div>
+</div>
+
+<footer id="footer" class="wrapper footer">
+  <div class="container">
+    Футерок. Копирайт 2014 бай фоззі. Все права защищены лицухой <a href="http://en.wikipedia.org/wiki/WTFPL" target="_blank">WTFPL</a> <a href="http://www.wtfpl.net/"><img
+          src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
+          width="80" height="15" alt="WTFPL" /></a>
+  </div>
+</footer>
+
+
+<!-- scripts
+___________________________________________________________________________-->
+<script src="js/libs.js"></script>
+<script src="js/common.js?v=1428047268431"></script>
+<!--[if lte IE 8]><script src="js/ie8.js"></script><![endif]-->
+<script src="//localhost:35729/livereload.js"></script>
+
+
+</body>
+</html>

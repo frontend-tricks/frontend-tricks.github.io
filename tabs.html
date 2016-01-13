@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie-9 lt-ie-8 lt-ie-7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie-9 lt-ie-8 ie-7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie-9 ie-8"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie-9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8"/>
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <!-- <link rel="stylesheet" href="css/SyntaxHighlighter/shCore.css?v=1428047268431"/>-->
+    <link rel="stylesheet" href="css/SyntaxHighlighter/shCoreDefault.css?v=1428047268431"/>
+  <link rel="stylesheet" href="css/style.css?v=1428047268431"/>
+  <script src="js/modernizr.js"></script>
+  <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css?v=1428047268431"/><![endif]-->
+  <!--[if lte IE 9]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
+
+  <!--
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="">
+    <meta name="robots" content="index,follow">
+    <meta name="copyright" content="">
+  -->
+</head>
+
+
+<body>
+
+<div id="pageWrapper" class="page__wrapper">
+
+<header class="wrapper header">
+  <div class="container">
+    <p>
+        Самый лучшІй хедер
+    </p>
+  </div>
+</header>
+
+
+  <div class="container">
+
+      <div class="row">
+          <div class="col-md-3">
+<div id="sidebar">
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="scroll-top.html">Scroll To Top</a></li>
+            <li><a href="fixed-header.html">Fixed header</a></li>
+            <li><a href="tabs.html">Tabs</a></li>
+            <li><a href="equalheight.html">equalHeight</a></li>
+            <li><a href="crib.html">Crib</a></li>
+            <li><a href="glyphs.html">Glyphs</a></li>
+            <li><a href="accordion.html">Accordion</a></li>
+            <li><a href="element-click.html">Click outside an element</a></li>
+            <li><a href="links.html">Links</a></li>
+        </ul>
+    </nav>
+</div>
+          </div>
+          <div class="col-md-9">
+              <div class="info-box">
+                  <h1>jQuery Tabs</h1>
+                  <h2>Writing the Markup</h2>
+                  <pre class="brush: html">
+                    &lt;ul class=&#39;tabs&#39;&gt;
+                        &lt;li&gt;&lt;a href=&#39;#tab1&#39;&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&#39;#tab2&#39;&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&#39;#tab3&#39;&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+
+                    &lt;div id=&#39;tab1&#39;&gt;
+                        &lt;p&gt;Hi, this is the first tab.&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div id=&#39;tab2&#39;&gt;
+                        &lt;p&gt;This is the 2nd tab.&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div id=&#39;tab3&#39;&gt;
+                        &lt;p&gt;And this is the 3rd tab.&lt;/p&gt;
+                    &lt;/div&gt;
+                  </pre>
+                  <h2>Writing the jQuery</h2>
+                  <pre class="brush: js">
+                    $(&#39;ul.tabs&#39;).each(function(){
+                        // For each set of tabs, we want to keep track of which tab is active and
+                        //its associated content
+                        var $active, $content, $links = $(this).find(&#39;a&#39;);
+
+                        // If the location.hash matches one of the links, use that as the active tab.
+                        // If no match is found, use the first link as the initial active tab.
+                        $active = $($links.filter(&#39;[href=&quot;&#39;+location.hash+&#39;&quot;]&#39;)[0] || $links[0]);
+                        $active.addClass(&#39;active&#39;);
+
+                        $content = $($active[0].hash);
+
+                        // Hide the remaining content
+                        $links.not($active).each(function () {
+                            $(this.hash).hide();
+                        });
+
+                        // Bind the click event handler
+                        $(this).on(&#39;click&#39;, &#39;a&#39;, function(e){
+                            // Make the old tab inactive.
+                            $active.removeClass(&#39;active&#39;);
+                            $content.hide();
+
+                            // Update the variables with the new link and content
+                            $active = $(this);
+                            $content = $(this.hash);
+
+                            // Make the tab active.
+                            $active.addClass(&#39;active&#39;);
+                            $content.show();
+
+                            // Prevent the anchor&#39;s default click action
+                            e.preventDefault();
+                        });
+                    });
+                  </pre>
+                  <p>Пример: <a href="http://www.jacklmoore.com/notes/jquery-tabs/" target="_blank">http://www.jacklmoore.com/notes/jquery-tabs/</a></p>
+              </div>
+
+          </div>
+      </div>
+  </div>
+</div>
+
+<footer id="footer" class="wrapper footer">
+  <div class="container">
+    Футерок. Копирайт 2014 бай фоззі. Все права защищены лицухой <a href="http://en.wikipedia.org/wiki/WTFPL" target="_blank">WTFPL</a> <a href="http://www.wtfpl.net/"><img
+          src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
+          width="80" height="15" alt="WTFPL" /></a>
+  </div>
+</footer>
+
+
+<!-- scripts
+___________________________________________________________________________-->
+<script src="js/libs.js"></script>
+<script src="js/common.js?v=1428047268431"></script>
+<!--[if lte IE 8]><script src="js/ie8.js"></script><![endif]-->
+<script src="//localhost:35729/livereload.js"></script>
+
+
+</body>
+</html>
